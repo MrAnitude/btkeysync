@@ -1,0 +1,15 @@
+[Unit]
+Description=Sync Bluetooth Link Keys from Windows to BlueZ
+# Run after the filesystem and bluetooth are up. The program itself stops
+# bluetooth, writes the key, and starts it again, so we must NOT order this
+# Before=bluetooth.service — that would deadlock (bluetooth waits for us, we
+# wait for bluetooth). Ordering it After bluetooth means the daemon is already
+# up when we stop/write/start it.
+After=local-fs.target bluetooth.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/btkeysync
+
+[Install]
+WantedBy=multi-user.target

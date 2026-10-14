@@ -1,0 +1,64 @@
+# ---- CMake / build output ----
+build/
+cmake-build-*/
+out/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+compile_commands.json
+.cmake/
+
+# ---- Compiled objects / binaries ----
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.d
+*.gch
+*.pch
+btkeysync
+
+# ---- Debug / profiling ----
+*.dSYM/
+core
+core.*
+vgcore.*
+perf.data*
+callgrind.out.*
+
+# ---- Backups written by BlueZInfo::save() ----
+*.bak
+info.bak
+
+# ---- Local, machine-specific config (MACs, mount paths) ----
+btkeysync.conf
+*.local.conf
+config.local.*
+
+# ---- Dumps of key material: never commit these ----
+*.hive
+SYSTEM
+SYSTEM.*
+*.reg
+keys.txt
+*.key
+
+# ---- Editor / IDE ----
+.vscode/
+.idea/
+.cache/
+.ccls-cache/
+*.swp
+*.swo
+*~
+.DS_Store
+tags
+TAGS
+
+# ---- Logs ----
+*.log
